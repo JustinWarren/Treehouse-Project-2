@@ -1,0 +1,258 @@
+/* 
+Make sure to comment out each
+ section to explain what it does!!!
+ */
+ 
+
+ * {
+	 box-sizing: border-box;
+ }
+ 
+/*************** Type selectors***********/
+
+body {
+	font-family: 'Roboto', sans-serif;
+	
+}
+
+ p {
+	 font-size: 1em;
+	 padding-bottom: 5px;
+ }
+
+ h3 {
+	 padding-top: 25px; /*This creates separation betweeen picture and headline!*/
+ }
+ 
+ img {
+	 max-width:100% /*Allows image to adjust proportionally as browser gets smaller and bigger*/
+ }
+ 
+ li {
+	 padding: 10px 0;
+	 text-align: center;
+	 margin: 5px;  /*Separted list items from eachother to make buttons" */
+	 list-style-type: none;  /* Removes bullet points!*/
+	 font-weight: bold;
+ }
+ 
+ ul {
+	 padding-left: 25px;
+ }
+ 
+ a {
+	 color: black;
+	 text-decoration: none;
+ }
+ 
+/*****************Class selectors***************/
+
+.top-section {
+	background-color: whitesmoke;
+}
+
+.header {
+	text-align: center;
+	overflow: hidden;
+	margin-top: 0;
+}
+
+.name {
+	text-align: center;
+}
+
+.main-nav li {
+	background-color: white;
+	text-transform: uppercase;
+	width: 90%;
+}
+
+.about-me {
+	text-align: center;
+}
+
+.about-blurb {
+	padding: 0 10px 25px 10px;
+}
+	
+.profile-pic {
+	padding: 20px 20px 0 20px;
+}	
+
+
+.second-header{
+	text-align: center;
+	text-transform: uppercase;
+	padding-bottom: 15px;
+}
+
+/*.primary-content {
+	text-align: center;
+	margin: auto;
+	padding: 0px 20px;
+}
+*/
+.main-content {
+	text-align: center;
+	margin: auto;
+	padding: 0px 10px;
+}
+
+.bottom-section{
+	background-color: whitesmoke;
+	padding: 0 5px;
+}
+
+.contact{
+	text-align: center;
+	margin: auto;
+	padding: 0px 55px;
+	border-bottom: 2px solid gainsboro;
+}
+
+.contact-header {
+	text-transform: uppercase;
+}
+
+
+.footer-nav {
+	display: none;
+}
+
+.footer-name{
+	float: left;
+	margin: 0;
+	font-weight: bold; /****NOTE: Experiment with inline/inline-block and floats to get footer on the same line****/
+}
+
+
+.top {
+	float: right;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.clearfix::after {
+		content:"";
+		display: table;
+		clear: both;
+	}	
+
+/*-----------  Media queries -------------- */
+
+@media (min-width: 768px) {
+	
+	.header {
+		padding-top: 15px;
+	}
+	
+	.name,
+	.main-nav li {
+		text-align: center;
+		display: inline;
+	}
+	
+	.main-nav li {
+		background-color: whitesmoke;
+	}
+	
+
+	.profile-pic {
+		float: right;
+		margin: 0 10px 25px 15px;
+	}
+	
+	.about-blurb {
+		padding-top: 15px;
+		font-size: 1.2em;
+	}
+	
+	/* ----- Columns -----*/
+	
+
+	
+	/*This makes columns very small and 45% */
+	.primary,
+	.secondary {
+		width:45%;
+	}
+	
+	.primary {
+		float: left;
+	}
+	
+	.secondary {
+		float: right;
+	}
+	
+	.clearfix::after {
+		content: "";
+		display: table;
+		clear: both;
+	}	
+	
+	
+	.footer-name {
+		float: left;
+		padding-top: 15px;
+		padding-left:15px;
+	}
+	
+	.footer-nav {
+		float: right;
+		display: inline-flex;
+		padding-right: 15px;
+		margin-top: 0px;
+	}
+	
+	
+	
+	.top {
+		display:none;
+	}
+	
+}
+
+@media (min-width: 1024px) {
+	
+	
+	.header {
+		margin: 0 25px;
+		padding-top: 15px;
+	}
+	
+	.name {
+		float: left;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	.main-nav {
+		float: right;
+		margin-bottom: 10px;
+	}
+	
+	.about-blurb {
+		margin: 0 25px;
+	}
+	
+	.column-one,
+	.column-two,
+	.column-three {
+		width:33%;
+	}
+
+	.column-one,
+	.column-two,
+	.column-three {
+		float: left;
+	}
+	.clearfix::after {
+		content: "";
+		display: table;
+		clear: both;	
+	}
+		
+	.top {
+		display: none;
+	}
+}
